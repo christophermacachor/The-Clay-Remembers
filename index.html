@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Clay Remembers: Interrogating the Earth’s Oldest Archive</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap">
     <style>
         :root {
             --primary-color: #1a202c;
@@ -15,16 +14,20 @@
             --highlight-bg: #f3e8ff;
         }
         body {
-            font-family: Georgia, 'Times New Roman', serif;
+            font-family: 'Georgia', 'Times New Roman', serif;
             line-height: 1.8;
             color: var(--text-color);
             background-color: var(--bg-color);
             margin: 0;
             padding: 0;
         }
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
         h1 {
-            font-family: 'Inter', Helvetica, Arial, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-size: 2.8em;
             color: var(--primary-color);
             line-height: 1.2;
@@ -32,7 +35,7 @@
             letter-spacing: -0.5px;
         }
         .subtitle {
-            font-family: 'Inter', Helvetica, Arial, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-size: 1.3em;
             color: var(--accent-color);
             font-weight: 300;
@@ -40,18 +43,8 @@
             border-bottom: 2px solid #e2e8f0;
             padding-bottom: 20px;
         }
-        .byline {
-            font-family: 'Inter', Helvetica, Arial, sans-serif;
-            font-size: 1.05em;
-            color: var(--caption-color);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-top: -30px;
-            margin-bottom: 40px;
-        }
         h2 {
-            font-family: 'Inter', Helvetica, Arial, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-size: 1.8em;
             color: var(--primary-color);
             margin-top: 50px;
@@ -59,13 +52,16 @@
             padding-left: 15px;
         }
         h3 {
-            font-family: 'Inter', Helvetica, Arial, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-size: 1.3em;
             color: var(--primary-color);
             margin-top: 30px;
             font-weight: 600;
         }
-        p { font-size: 1.15em; margin-bottom: 25px; }
+        p {
+            font-size: 1.15em;
+            margin-bottom: 25px;
+        }
         code {
             background-color: var(--highlight-bg);
             color: #553c9a;
@@ -75,17 +71,23 @@
             font-size: 0.9em;
             font-weight: 600;
         }
-        figure { margin: 50px 0; text-align: center; }
+        figure {
+            margin: 50px 0;
+            text-align: center;
+        }
         figure img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            display: block;
-            margin: 0 auto;
+            background-color: #e2e8f0;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         figcaption {
-            font-family: 'Inter', Helvetica, Arial, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-size: 0.95em;
             color: var(--caption-color);
             margin-top: 15px;
@@ -109,8 +111,37 @@
             border-radius: 8px;
             padding: 30px;
             margin: 30px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
-        .protocol-list h3 { margin-top: 10px; color: var(--accent-color); }
+        .protocol-list h3 {
+            margin-top: 10px;
+            color: var(--accent-color);
+        }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--accent-color);
+        }
+        a:hover {
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--primary-color);
+        }
+        .references {
+            margin-top: 70px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            font-size: 0.95em;
+        }
+        .references h2 {
+            font-size: 1.5em;
+            margin-top: 0;
+            border-left: none;
+            padding-left: 0;
+        }
+        .references p {
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
         .epigraph {
             font-style: italic;
             color: var(--caption-color);
@@ -119,14 +150,6 @@
             margin: 40px 0;
             font-size: 1.05em;
         }
-        .references {
-            margin-top: 70px;
-            padding-top: 30px;
-            border-top: 2px solid #e2e8f0;
-            font-size: 0.95em;
-        }
-        .references h2 { font-size: 1.5em; margin-top: 0; border-left: none; padding-left: 0; }
-        .references p { font-size: 0.95em; margin-bottom: 15px; }
     </style>
 </head>
 <body>
@@ -135,7 +158,7 @@
 
     <h1>The Clay Remembers: Interrogating the Earth’s Oldest Archive</h1>
     <p class="subtitle">At the boundary of material science and ancient myth, a new empirical mandate demands we look beyond the text and read the substrate.</p>
-    <p class="byline">By Christopher Macachor</p>
+    <p style="font-size: 0.95em; color: var(--caption-color); margin-top: -30px; margin-bottom: 40px;">By Christopher Macachor</p>
 
     <p>Cuneiform is the world’s oldest known writing system, developed around 3200 B.C.E. by the Sumerians in Uruk (modern-day southern Iraq). Its name derives from the Latin word <em>cuneus</em> (wedge), describing the distinctive marks pressed into soft clay tablets. For over 3,000 years, until about 75 C.E., it remained the dominant script of the ancient Near East.</p>
 
@@ -152,7 +175,7 @@
     <p>But in our rush to dismiss premature hype, we must be careful not to dismiss the underlying hypothesis entirely. Because modern material science and quantum physics now suggest something profound: <strong>the mechanism for physical memory in clay is real.</strong> We just haven’t bothered to measure it yet.</p>
 
     <figure>
-        <img src="https://res.cloudinary.com/fetch-ai/image/upload/v1790288104/6c979251-825c-4743-9b33-d089dbd06433.jpg" alt="Ancient Sumerian cuneiform tablet showing dense wedge inscriptions and a fractured raw clay edge">
+        <img src="https://res.cloudinary.com/fetch-ai/image/upload/v1790288104/6c979251-825c-4743-9b33-d089dbd06433.jpg" alt="Ancient Sumerian Cuneiform Tablet showing dense wedge inscriptions and a fractured raw clay edge">
         <figcaption><strong>Figure 1: The Macro-Archive and the Micro-Archive.</strong> Linguists study the wedge inscriptions to decode ancient history. However, to a material scientist, this object is a dual-porosity thermodynamic system. Current NMR and micro-CT methodologies offer the first viable pathway to decoding the physical memory trapped within the clay matrix itself.</figcaption>
     </figure>
 
@@ -177,32 +200,44 @@
     <p>We do not yet know if the signal survives firing, burial, and five thousand years of diagenesis. But the instrument that could answer the question now exists.</p>
 
     <figure>
-        <img src="https://res.cloudinary.com/fetch-ai/image/upload/v1790288323/chat-images/u0lwsgcbcvs5skiu8hoz.jpg" alt="Methodology diagram showing a cuneiform tablet being 3D scanned, digitally unwrapped into a flat surface, and rendered as a shaded relief map">
-        <figcaption><strong>Figure 2: Visualizing the Invisible.</strong> The empirical methodology in four stages: the physical tablet is 3D-scanned, its curved surface digitally unwrapped into a flat coordinate system, and rendered as a shaded relief map — exposing every stylus impression as measurable geometry. This same unwrapped substrate is the surface on which the proposed micro-CT, HRXRD, and supercooled TRPE NMR protocols would be applied to test for hydrostatic memory.</figcaption>
+        <img src="https://res.cloudinary.com/fetch-ai/image/upload/v1790288323/chat-images/u0lwsgcbcvs5skiu8hoz.jpg" alt="Scientific visualization of clay micro-pores and NMR T2 relaxation distribution graph">
+        <figcaption><strong>Figure 2: Visualizing the Invisible.</strong> The empirical methodology in four stages: the physical tablet is 3D-scanned, its curved surface digitally unwrapped into a flat coordinate system, and rendered as a shaded relief map. This same unwrapped substrate is the surface on which the proposed micro-CT, HRXRD, and supercooled TRPE NMR protocols would be applied to test for hydrostatic memory.</figcaption>
     </figure>
 
-    <h2>III. The Premature Leap and the Empirical Mandate</h2>
+    <h2>III. The Catalytic Substrate: Prebiotic Architecture and Selective Memory</h2>
+    <p>To fully grasp the clay’s capacity for memory, we must look beyond the historical archive to the prebiotic archive. Long before the first scribe pressed a reed into mud, clay was actively shaping the origins of life itself. As demonstrated by Ferris (2006), montmorillonite clay—a product of aqueous volcanic weathering—acts as a highly selective prebiotic catalyst. It does not merely provide a passive surface; it actively organizes matter.</p>
+
+    <p>In laboratory simulations of early Earth conditions, montmorillonite catalyzes the polymerization of activated nucleotides into RNA oligomers up to 50 units long. Crucially, it does this with <strong>selectivity</strong>, not randomness. By lowering the activation energy for specific reaction pathways, the clay’s negatively charged silicate layers and exchangeable cations align molecules into precise orientations, favoring specific phosphodiester bonds and even exhibiting homochiral preference. Furthermore, this same clay catalyzes the formation of lipid vesicles, providing the very walls of the first protocells.</p>
+
+    <p>This prebiotic selectivity is the exact same physical principle we propose is activated by the cuneiform stylus. Clay does not generate random noise; it is a structure-forming medium. Just as montmorillonite selectively organized nucleotides into the first biopolymers, the mechanical stress of the stylus selectively reorganizes the clay’s dual-porosity fabric and transient water network. The clay that shaped the first RNA is the same clay that remembers the scribe's hand. It is not a bystander to history; it is an active, structure-imposing participant.</p>
+
+    <figure>
+        <img src="https://res.cloudinary.com/fetch-ai/image/upload/v1790288547/4ad00d05-c3bd-4b84-8bb8-f7bb6714bd7e.jpg" alt="Conceptual visualization of clay layers organizing molecular structures, bridging prebiotic RNA formation and ancient cuneiform impressions">
+        <figcaption><strong>Figure 3: The Continuity of Structure.</strong> A conceptual visualization of material continuity. The same dual-porosity, catalytic properties of montmorillonite that selectively organized prebiotic RNA oligomers and protocell vesicles are the properties that allow the clay substrate to retain a specific, non-random thermodynamic memory of a stylus impression millennia later.</figcaption>
+    </figure>
+
+    <h2>IV. The Premature Leap and the Empirical Mandate</h2>
     <p>Recognizing this poetic and scientific convergence is not a license for fringe speculation. It is a mandate for rigorous, uncompromising science. The 2026 Public Report on "Cuneiform Clay Pressing and Premature Scalar-Encoding Claims" established strict quantitative thresholds that must be met before any "hidden data" claims can be validated:</p>
 
     <ul>
         <li><strong>E1 (Lattice Strain):</strong> Measured lattice strain must be <code>Δa/a₀ ≥ 5 × 10⁻⁷</code> under a defined gradient.</li>
-        <li><strong>E2 (Hydrostatic NMR):</strong> Bimodal CPMG <code>T₂</code> NMR distribution must show a primary peak shift <code>≥ 5%</code>, and a secondary peak <code>T₂ &lt; 50 ms</code> at <code>≥ 3%</code> integrated area, with a decay half-life <code>τ ≥ 12 h</code>.</li>
+        <li><strong>E2 (Hydrostatic NMR):</strong> Bimodal CPMG <code>T₂</code> NMR distribution must show a primary peak shift <code>≥ 5%</code>, and a secondary peak <code>T₂ < 50 ms</code> at <code>≥ 3%</code> integrated area, with a decay half-life <code>τ ≥ 12 h</code>.</li>
         <li><strong>E3 (Scalar Packing):</strong> Radial distribution function <code>g(r)</code> peaks must align at <code>r/a = 1.0, 1.73, 2.65</code>, distinguishable from classical FCC/HCP packing.</li>
     </ul>
 
     <p>If we want to know the truth, we must move beyond philosophical musing and fund complete, empirical testing to meet these exact thresholds. No ad hoc adjustments. No narrative defense without raw data.</p>
 
     <figure>
-        <img src="https://res.cloudinary.com/fetch-ai/image/upload/v1790288104/6c979251-825c-4743-9b33-d089dbd06433.jpg" alt="A heavily fragmented ancient cuneiform tablet featuring dense wedge inscriptions">
-        <figcaption><strong>Figure 3: The Memory of Fracture.</strong> Every fracture line visible on this fragmented tablet represents a massive localized stress event—a collapse of inter-cluster pores and an irreversible reorientation of the clay’s fabric tensor. Applying TRPE NMR to these specific fracture zones could theoretically reveal the hydrostatic memory of the exact moment this tablet broke, thousands of years ago.</figcaption>
+        <img src="https://res.cloudinary.com/fetch-ai/image/upload/v1790288104/6c979251-825c-4743-9b33-d089dbd06433.jpg" alt="A heavily fragmented ancient cuneiform tablet featuring dense wedge inscriptions and concentric circular diagrams, held together by thin display wires.">
+        <figcaption><strong>Figure 4: The Memory of Fracture.</strong> Every fracture line visible on this fragmented tablet represents a massive localized stress event—a collapse of inter-cluster pores and an irreversible reorientation of the clay’s fabric tensor. Applying TRPE NMR to these specific fracture zones could theoretically reveal the hydrostatic memory of the exact moment this tablet broke, thousands of years ago.</figcaption>
     </figure>
 
-    <h2>IV. The Narrative of the Earth: Vessel and Archive</h2>
+    <h2>V. The Narrative of the Earth: Vessel and Archive</h2>
     <p>This is where the empirical record converges with humanity’s oldest narratives, offering a profound bridge between science and the human search for meaning.</p>
 
     <figure>
-        <img src="https://res.cloudinary.com/fetch-ai/image/upload/v1790288310/chat-images/uly2psvjmdzcmw8x7hbz.jpg" alt="Ancient Mesopotamian stone relief carving of a bearded divine figure wearing a horned cap, holding a lion cub, representing the Anunnaki or Gilgamesh">
-        <figcaption><strong>Figure 4: The Architect and the Substrate.</strong> This ancient relief depicts a divine figure exerting dominion over the natural world. For millennia, these figures have been central to the mythological narrative of the "Shaper," the divine architect who fashioned the first humans from clay and dust. While this stone relief captures the <em>image</em> of the creator, the humble clay tablets left behind may capture the <em>thermodynamic touch</em> of the created.</figcaption>
+        <img src="https://res.cloudinary.com/fetch-ai/image/upload/v1790288310/chat-images/uly2psvjmdzcmw8x7hbz.jpg" alt="Ancient Mesopotamian stone relief carving of a bearded divine figure wearing a horned cap, holding a lion cub, representing the Anunnaki or Gilgamesh.">
+        <figcaption><strong>Figure 5: The Architect and the Substrate.</strong> This ancient relief depicts a divine figure exerting dominion over the natural world. For millennia, these figures have been central to the mythological narrative of the "Shaper," the divine architect who fashioned the first humans from clay and dust. While this stone relief captures the <em>image</em> of the creator, the humble clay tablets left behind may capture the <em>thermodynamic touch</em> of the created.</figcaption>
     </figure>
 
     <p>Across disparate ancient cultures, separated by oceans and millennia, the foundational creation myth is remarkably consistent: the first humans were not born of the ether, but were sculpted from dust, sand, and clay. The Sumerians described Enki fashioning humanity from clay; the Hebrew text describes Yahweh forming Adam from the dust of the ground; the Quran describes creation from sounding clay.</p>
@@ -210,18 +245,13 @@
     <p>For centuries, modernity has dismissed these accounts as mere poetic metaphor. But what if they were proto-empirical observations? A culture that spent millennia pressing information into wet earth, watching it harden, and preserving it across generations developed an intimate, tactile understanding of silicate substrates. They knew clay’s plasticity, its capacity to hold a shape long after the hand had withdrawn, and its deep connection to water and life.</p>
 
     <figure>
-        <img src="https://res.cloudinary.com/fetch-ai/image/upload/v1790288389/chat-images/u9iaojgpmerohhiays4l.jpg" alt="Ancient baked clay plaque depicting the winged Mesopotamian goddess Ishtar with the eight-pointed star symbol">
-        <figcaption><strong>Figure 5: The Medium and the Myth.</strong> This baked clay plaque depicts the goddess Ishtar, marked by her eight-pointed star. Art historians study the iconography; material scientists study the matrix. The ancients believed the gods shaped humanity from this very earth. Here, the earth has been shaped to depict the gods. If we apply the proposed CPMG NMR protocols to this plaque, we would not just be reading a myth—we would be reading the physical, hydrostatic memory of the moment the myth was formed.</figcaption>
+        <img src="https://res.cloudinary.com/fetch-ai/image/upload/v1790288389/chat-images/u9iaojgpmerohhiays4l.jpg" alt="Ancient baked clay plaque depicting the winged Mesopotamian goddess Ishtar holding a lion, facing a worshipper, with celestial sun and star symbols.">
+        <figcaption><strong>Figure 6: The Medium and the Myth.</strong> This baked clay plaque depicts the goddess Ishtar, marked by her eight-pointed star. Art historians study the iconography; material scientists study the matrix. The ancients believed the gods shaped humanity from this very earth. Here, the earth has been shaped to depict the gods. If we apply the proposed CPMG NMR protocols to this plaque, we would not just be reading a myth—we would be reading the physical, hydrostatic memory of the moment the myth was formed.</figcaption>
     </figure>
 
     <p>If the clay substrate possesses the capacity to retain thermodynamic data, and the human body is fundamentally composed of the same silicate and aqueous matrix, the boundary between "author" and "archive" begins to blur. We are the silicate matrix, momentarily organized, attempting to decipher its own origins. While material science does not validate theology, nor does theology dictate empirical parameters, this epistemological convergence warrants rigorous investigation rather than reflexive dismissal.</p>
 
-    <figure>
-        <img src="https://res.cloudinary.com/fetch-ai/image/upload/v1790288547/4ad00d05-c3bd-4b84-8bb8-f7bb6714bd7e.jpg" alt="Conceptual synthesis scene of illuminated cuneiform tablets floating above the earth's substrate, revealing clay micro-structures and trapped water molecules in golden light">
-        <figcaption><strong>Figure 6: The Ultimate Synthesis.</strong> A conceptual visualization of the convergence. The illuminated tablets represent the macro-narrative—the cuneiform wedges we have spent centuries decoding. Beneath them lies the unmeasured substrate. If clay possesses thermodynamic memory, what does the earth remember of the weight, the heat, and the transient water of the hands that shaped it?</figcaption>
-    </figure>
-
-    <h2>V. The Protocol: A Call for Complete Empirical Testing</h2>
+    <h2>VI. The Protocol: A Call for Complete Empirical Testing</h2>
     <p>We propose a strict, three-phase scientific protocol to be executed within the next 36 months. This is not a search for magic; it is a rigorous interrogation of material science.</p>
 
     <div class="protocol-list">
@@ -235,14 +265,14 @@
         <p>All findings must meet rigorous 3σ statistical thresholds against control samples of unworked, naturally deposited clay from the same geological regions. The E1, E2, and E3 thresholds defined in the Scalar Prediction Ledger must be empirically evaluated.</p>
     </div>
 
-    <h2>VI. The Narrative of Hope</h2>
+    <h2>VII. The Narrative of Hope</h2>
     <p>Why does this matter? Why demand millions in funding to read the mud beneath the words?</p>
 
     <p>Because it fundamentally changes our relationship with the past, and ultimately, with ourselves. For centuries, we have viewed history as a fragile thing—a collection of texts that can burn, rot, or fade. But if the clay itself holds a thermodynamic memory, then history is not just written; it is <em>embodied</em>. The physical effort of the scribe, the humidity of the ancient Mesopotamian afternoon, the precise angle of the reed—these are not lost to time. They are locked in the hydrogen bonds and collapsed pores of the earth.</p>
 
     <p>This brings us to the boundary of science and the narrative of hope. The ancient myths told us that the earth was given the capacity to hold the form of life and memory. Modern material science is now revealing that the earth indeed has a complex, water-bearing architecture that records the touch of the creator.</p>
 
-    <h2>VII. The Aperture of Structure: Beyond the Empirical</h2>
+    <h2>VIII. The Aperture of Structure: Beyond the Empirical</h2>
 
     <div class="epigraph">
         Knowledge applied is intelligence.<br>
@@ -265,9 +295,12 @@
 
         <p><strong>2. Xia, W., Chen, J., Jiang, L., Lu, M., Liu, M., Yang, M., Li, C., &amp; Liu, Y. (2025).</strong> Visualize Transient Water-Mediated Hydrogen Bonds Facilitating the Formation of Enzymatic Near-Attack Conformers. <em>JACS Au, 5</em>(12), 5322-5336.</p>
 
-        <p><strong>3. Public Report (2026).</strong> Cuneiform on Clay as a "Scalar Information-Storage Architecture" — Verified Fact vs. Unvalidated Hypothesis. <em>Φ₀ Engine Terraform Prime Validation Sequence / Zenodo Submission</em>.</p>
+        <p><strong>3. Ferris, J. P. (2006).</strong> Montmorillonite-catalysed formation of RNA oligomers: the possible role of catalysis in the origins of life. <em>Philosophical Transactions of the Royal Society B: Biological Sciences, 361</em>(1474), 1777-1786.</p>
 
-        <p><strong>4. Taylor, J. (2019).</strong> Nimrud Project. <em>Oracc.org</em>. (Archaeological source material utilized in the Public Report audit).</p>
+        <p><strong>4. Public Report (2026).</strong> Cuneiform on Clay as a "Scalar Information-Storage Architecture" — Verified Fact vs. Unvalidated Hypothesis. <em>Φ₀ Engine Terraform Prime Validation Sequence / Zenodo Submission</em>.<br>
+        DOI: 10.5281/zenodo.22948096</p>
+
+        <p><strong>5. Taylor, J. (2019).</strong> Nimrud Project. <em>Oracc.org</em>. (Archaeological source material utilized in the Public Report audit).</p>
     </div>
 
 </div>
